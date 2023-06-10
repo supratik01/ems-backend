@@ -66,7 +66,7 @@ router.get('/employees/:id', (req, res, next) => {
 });
 
 /* Add employee details. */
-router.post('/add-employee', uploadProfileImg.single('avatar'), async(req, res, next) => {
+router.post('/employees', uploadProfileImg.single('avatar'), async(req, res, next) => {
     const profilePic = req.file;
     const empDetails = req.body;
 
@@ -127,7 +127,7 @@ router.post('/add-employee', uploadProfileImg.single('avatar'), async(req, res, 
 });
 
 /* Update employee details. */
-router.put('/edit-employee/:id', uploadProfileImg.single('avatar'), async(req, res, next) => {
+router.put('/employees/:id', uploadProfileImg.single('avatar'), async(req, res, next) => {
     const empId = req.params["id"];
     const profilePic = req.file;
     const empDetails = req.body;
@@ -193,7 +193,7 @@ router.put('/edit-employee/:id', uploadProfileImg.single('avatar'), async(req, r
 
 
 /* Delete employee */
-router.delete('/delete-employee/:id', async(req, res, next) => {
+router.delete('/employees/:id', async(req, res, next) => {
     const empId = req.params["id"];
     if (!empId) {
         return res.status(403).json({
