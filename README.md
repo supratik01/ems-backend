@@ -1,8 +1,8 @@
 # ems-backend
 Fidelity EMS backend for testing
 
-<!-- Installing Packages -->
-npm i
+// Install packages
+npm install
 
-<!-- Run the Server -->
+// Run the Server
 npm start
